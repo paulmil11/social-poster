@@ -95,7 +95,7 @@ class SocialPostGenerator:
             print(f"Attempting to generate content for post: {post['title']}")
             
             message = self.client.messages.create(
-                model="claude-3-5-haiku-20241022",
+                model="claude-3-5-sonnet-20241022",
                 max_tokens=1024,
                 temperature=0.7,
                 messages=[
@@ -105,7 +105,9 @@ class SocialPostGenerator:
 - Be under 280 characters
 - Include the URL at the end
 - Avoid emojis, hashtags, and calls to action
-- Focus on pulling compelling quotes or creating punchy hooks from the content
+- Focus on pulling compelling quotes (you dont need to put quotes around it)
+- if you dont use quotes, you can slightly rephrase the content
+- do not do any generic summarized takeaways
 
 Title: {post['title']}
 URL: {post['url']}

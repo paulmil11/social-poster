@@ -68,19 +68,16 @@
             gap: 10px;
             margin: 10px 0;
         }
-        
         .loading {
             display: none;
             margin: 20px 0;
             text-align: center;
             color: #666;
         }
-        
         .loading::after {
             content: "...";
             animation: dots 1.5s steps(5, end) infinite;
         }
-        
         @keyframes dots {
             0%, 20% { content: "." }
             40% { content: ".." }
@@ -138,7 +135,7 @@
             fetch('/generate', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ title: postTitle })
             })
